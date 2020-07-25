@@ -1,0 +1,141 @@
+//***************************************************************************
+//Выполнение заданий к третьему уроку "Основы С" Александр Юнин.
+
+
+#include <stdio.h>
+//#include <math.h>
+
+//Функция для задания №1:
+
+//int calcSquareEq(int a, int b, int c, double* x1, double* x2)
+//{
+//    float D;
+//    D = (b * b) - (4 * a * c);
+//    if(D < 0)
+//    {
+//        return -1;
+//    }
+//    else
+//    {
+//        if(D == 0)
+//        {
+//            *x1 = (- b) / (2 * a);
+//            *x2 = *x1;
+//            return 0;
+//        }
+//        else
+//        {
+//            *x1 = (- b + sqrt(D)) / (2 * a);
+//            *x2 = (- b - sqrt(D)) / (2 * a);
+//            return 1;
+//        }
+//    }
+//}
+
+//Функция для задания №2:
+
+//int evenInteger(int* arr, int ARRAY_LENGTH)
+//{
+//    int k = 0;
+//    int j;
+//    for(j = 0; j < ARRAY_LENGTH; j++)
+//    {
+//        if(*(arr + j) % 2 != 0)
+//        {
+//            arr[j] = *(arr + j) * 2;
+//            k = 1;
+//        }
+//        else
+//        {
+//            continue;
+//        }
+//    }
+//    if(k == 1)
+//    {
+//        return 1;
+//    }
+//    else
+//    {
+//        return 0;
+//    }
+//}
+
+//Функция для задания №3:
+
+void asShortPrint(unsigned* arr, int len)
+{
+    int i;
+//    unsigned short a;
+    for(i = 1; i < len; i++)
+    {
+//        a = *(arr + i);
+        printf("%u ", *(arr + i) >> 16);
+    }
+}
+
+int main(int argc, const char** argv)
+{
+
+// Задание №1:
+
+//    int a, b, c;
+//    double X1, X2;
+//    printf("Нахождение корней уравнения вида: a*x**2 +b*x +c=0\n Введите значение для a: \n");
+//    scanf("%d", &a);
+//    printf("Введите значение для b: \n");
+//    scanf("%d", &b);
+//    printf("Введите значение для c: \n");
+//    scanf("%d", &c);
+//    int d;
+//    double* x1 = &X1;
+//    double* x2 = &X2;
+//    d = calcSquareEq(a, b, c, x1, x2);
+//    if(d == 0)
+//    {
+//        printf("Уравнение имеет один корень. x1 = x2 = %f\n", X1);
+//    }
+//    else
+//    {
+//        if(d == 1)
+//        {
+//            printf("Уравнение имеет два корня:\n x1  = %f\n x2 = %f\n", X1, X2);
+//        }
+//        else
+//        {
+//            printf("Уравнение решений не имеет\n");
+//        }
+//    }
+
+// Задание №2:
+
+//    const int ARRAY_LENGTH = 10;
+//    int ARRAY[ARRAY_LENGTH];
+//    int i = 0;
+//    printf("Поочерёдно введите 10 целых чисел: \n");
+//    do
+//    {
+//        scanf("%d \n", &ARRAY[i]);
+//        i++;
+//    }
+//    while(i < ARRAY_LENGTH);
+//    if((evenInteger(ARRAY, ARRAY_LENGTH)) == 1)
+//    {
+//    printf("В массиве были нечётные числа.\n");
+//        for(i = 0; i < ARRAY_LENGTH; i++)
+//        {
+//            printf("%d  ", *(ARRAY + i));
+//        }
+//        printf("\n");
+//    }
+//    else
+//    {
+//        printf("В массиве отсутствуют нечётные числа\n");
+//    }
+
+// Задание №3:
+
+    const int ARRAY_LENGTH = 10;
+    unsigned int ARRAY[] = {0, 1, 2, 3, 4, 65541, 65542, 65543, 65544, 65545};
+    asShortPrint(ARRAY, ARRAY_LENGTH);
+return 0;
+}
